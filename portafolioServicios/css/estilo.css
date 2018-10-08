@@ -1,0 +1,356 @@
+body{
+    background: rgba(0,0,0,0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+/**********************header************************/
+.showcase::after {
+    content:'';
+    height: 60vh;
+    width: 100%;
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    transition: all 1000ms;
+}
+
+
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+}
+.content .logo{
+    height: 180px;
+    width: 180px;
+}
+
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.center{
+    text-align: center;
+    margin: auto;
+}
+/************Footer********/
+.bg-dark {
+    background-color:  #333;
+    color: #f4f4f4;
+}
+footer {
+    padding: 2.2rem;
+}
+footer p {
+    margin: 0;
+}
+footer a:first-of-type{
+    color: rgb(16, 16, 240); 
+}
+footer a:last-of-type{
+    color: rgba(206, 72, 38, 0.911); 
+}
+footer a:hover{
+    color: #fff;
+}
+/* Small Screens*/
+@media(max-width: 500px) {
+
+    .showcase::after {
+        height: 50vh;
+    }
+    .content {
+        top: 5%;
+        margin-top:  5px;
+    }
+    .content .logo{
+        height: 140px;
+        width: 140px;
+    }
+    .content .text {
+        display: none;
+    }
+    .grid-3, .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .services div{
+        border-bottom: #333 dashed 1px;
+        padding: 1.2rem 1rem; 
+    }
+    
+}
+/* Landscape */
+@media(max-height: 500px) {
+    .content .title, .content .text{
+        display: none;
+    }
+    .content{
+        top: 0;
+    }
+}
+/***********cuadro  horarios de Trekking pinchote*************/
+
+.cuadro {
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 
+    [c1-start] 150px
+    [c1-end c2-start] 1fr
+    [c2-end c3-start] 1fr
+    [c3-end]
+    ;
+    grid-template-rows: 
+    [horarios-start] 1fr
+    [horarios-end em-start] 1fr
+    [em-end restriccion-start] 1fr
+    [restriccion-end vp-start] 1fr 
+    [vp-end] 1fr
+    ;
+    justify-items: center;
+    align-items: center;
+    
+}
+.cuadro div:first-of-type{
+    
+    grid-column: c1-start / c1-end;
+    padding: 28px; 
+}
+.cuadro div:nth-child(2){
+    grid-column: c1-end /-1;
+    padding: 10px;
+    width: 80%;
+}
+.cuadro div:nth-child(4){
+    grid-column: c1-end /-1;
+}
+.cuadro div:nth-child(5){
+    
+    text-align: center;
+}
+.cuadro div:nth-child(6){
+    grid-column: c1-end /-1;
+    
+}
+.cuadro div:nth-child(8){
+    grid-column: c1-end /-1; 
+    padding-left: 59px;
+}
+.cuadro div:nth-child(10), .cuadro div:nth-child(11) {
+    padding: 20px;
+}
+
+
+
+@media(max-width:380px) {
+        .cuadro {
+        font-size: 0.8rem;
+        }
+        
+}
+@media(max-width:640px) {
+     .cuadro div:nth-child(10), .cuadro div:nth-child(11) {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    }
+}
+@media(max-width: 930px) {
+    .cuadro div:nth-child(8){
+    padding-left: 10px;
+    }
+    .cuadro div:first-of-type{
+    padding: 0px; 
+    }
+    .cuadro div:nth-child(2){
+    padding: 0px;
+    }
+}
+@media(max-width:840px) {
+     .cuadro {
+    font-size: 0.8rem;
+    }
+}
+/***********cuadro  horarios de Rafting Santander*************/
+.about-2 {
+    background-color: #f4f4f4;
+    color:#333;
+}
+.cuadroraf {
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 
+    [c1-start] 150px
+    [c1-end c2-start] 1fr
+    [c2-end c3-start] 1fr
+    [c3-end]
+    ;
+    grid-template-rows: 
+    [horarios-start] 50px
+    [horarios-end horariom-start] 50px
+    [horariom-end incluye-start] 1fr
+    [incluye-end edades-start] 1fr 
+    [edades-end  valor-start ] 1fr
+    [valor-end restriccion-start] 1fr
+    [restriccion-end]
+    ;
+     
+}
+.cuadroraf div{
+    text-align: center;
+}
+.cuadroraf div:first-of-type{
+    grid-row: horarios-start / horariom-end;
+}
+
+.cuadroraf div:nth-child(7){
+    grid-column: c2-start / -1;
+    
+}
+.cuadroraf div:nth-child(15){
+    grid-column: c2-start / -1;
+    
+}
+/*****************Cuadro Rafting Meta*****************/
+.about-3 {
+    color: #f4f4f4;
+}
+.cuadrometa {
+    display: grid;
+    height: 75vh;
+    grid-template-columns: 
+    [c1-start] 150px
+    [c1-end c2-start] 1fr
+    [c2-end c3-start] 1fr
+    [c3-end]
+    ;
+    grid-template-rows: 
+    [horarios-start] 50px
+    [horarios-end horariom-start] 50px
+    [horariom-end incluye-start] 1fr
+    [incluye-end edades-start] 1fr 
+    [edades-end  valor-start ] 1fr
+    [valor-end restriccion-start] 1fr
+    [restriccion-end]
+    ;
+     
+}
+.cuadrometa div{
+    text-align: center;
+}
+.cuadrometa div:first-of-type{
+    grid-row: horarios-start / horariom-end;
+}
+
+.cuadrometa div:nth-child(5){
+    align-self: center; 
+    
+}
+.cuadrometa div:nth-child(7){
+    grid-column: c2-start / c2-end;
+    
+}
+.cuadrometa div:last-of-type{
+    grid-column: c2-start / -1;
+}
+/*****************Cuadro Espeleismo****************/
+.cuadroespemo{
+    display: grid;
+    grid-template-columns: 
+    [c1-start] 150px
+    [c1-end c2-start] 3fr
+    [c2-end]
+    ;
+    grid-template-rows: 
+    [horario-start] 1fr
+    [horario-end incluye-start] 1fr
+    [incluye-end restriccion-start] 1fr
+    [restriccion-end valor-start] 2fr
+    [valor-end]
+    ;
+}
+.cuadroespemo div:first-of-type, .cuadroespemo div:nth-child(3), .cuadroespemo div:nth-child(5), .cuadroespemo div:nth-child(7) {
+    text-align: center;
+} 
+
+/*****************Cuadro Parapente****************/
+.cuadropara{
+    display: grid;
+    grid-template-columns: 
+    [c1-start] 150px
+    [c1-end c2-start] 1fr 
+    [c2-end c3-start] 1fr 
+    [c3-end]
+    ;
+    grid-template-rows: 
+    [beho-start] 50px
+    [beho-end horario-start] 1fr
+    [horario-end valor-start] 1fr
+    [ valor-end   incluye-start] 50px
+    [incluye-end restriccion-start] 1fr
+    [restriccion-end]
+    ;
+}
+.cuadropara div:first-of-type{
+    grid-column: c2-start / c2-end;
+}
+
+.cuadropara div:nth-child(10){
+    grid-column: c2-start / -1;
+}
+.cuadropara div:nth-child(3), .cuadropara div:nth-child(6), .cuadropara div:nth-child(9), .cuadropara div:nth-child(11) {
+    text-align: center;
+}
+
+/*****************Cuadro Bungee Jumping****************/
+
+/*No fue necesario grid columns ni rows. Se aplico los mismos estilos de
+cuadroespemo*/
+
+/*****************Cuadro Parque nacional del chichamocha****************/
+
+.cuadropn{
+    display: grid;
+    grid-template-columns: 
+    [c1-start ] 1fr
+    [c1-end c2-start] 1fr 
+    [c2-end c3-start] 1fr 
+    [c3-end]
+    ;
+    grid-template-rows: 
+    [horario-start] 1fr
+    [horario-end valor-start] 1fr 
+    [valor-end incluye-start] 1fr
+    [incluye-end]
+    ;
+}
+
+.cuadropn div{
+    text-align: center;
+}
+.cuadropn div:first-of-type{
+    grid-row: horario-start / valor-end;
+    
+}
+.cuadropn div:nth-child(10){
+    grid-column: c2-start / -1;
+}
+
+/*****************Información importante****************/
+
+.info_tarte {
+    list-style: none;
+    color: black;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,103 @@
+body{
+    background: rgba(0,0,0,0.9);
+    margin: 0;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+/**********************header************************/
+.showcase::after {
+    content:'';
+    height: 60vh;
+    width: 100%;
+    background-image: url(../../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+.showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.showcase:hover .content {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.showcase:hover .content:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    color: rgb(18, 153, 194);
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1000ms;
+}
+.content .logo{
+    height: 180px;
+    width: 180px;
+}
+.content .title {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+.content .text {
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+/***************definiendo backgrounds*********/
+.bg-light{
+    background-color: #fff;
+    color: #333;
+}
+
+/***************grid-3 principal*********/
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/**********************Footer***********************/
+.bg-dark {
+    background-color:  #333;
+    color: #f4f4f4;
+}
+footer {
+    padding: 2.2rem;
+}
+footer p {
+    margin: 0;
+}
+footer a:first-of-type{
+    color: rgb(16, 16, 240); 
+}
+footer a:last-of-type{
+    color: rgba(206, 72, 38, 0.911); 
+}
+footer a:hover{
+    color: #fff;
+}
