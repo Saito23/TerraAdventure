@@ -42,7 +42,9 @@ body{
     overflow: hidden;
     padding: 4rem 1rem;
 }
-
+.services{
+    text-align: justify;
+}
 .services .first:hover{
     color: rgb(194, 106, 18);
 }
@@ -263,6 +265,7 @@ img.hover-shadow {
 .more{
     text-decoration: none;
     color: #fff;
+    padding: 20px 10px;
 }
 .more:hover{
     background-color: #999;
