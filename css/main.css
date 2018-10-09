@@ -105,15 +105,7 @@ body{
 .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
-/*.about-2 div a{
-    text-decoration: none;
-    color: #fff;
-}
 
-.about-2 div a:hover{
-    text-decoration-line: underline;
-    color: rgba(160, 156, 156, 0.644);
-}*/
 
 /*Tercer section: - -*/
 .about-3{
