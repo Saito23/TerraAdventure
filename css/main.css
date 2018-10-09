@@ -270,7 +270,7 @@ img.hover-shadow {
 .more:hover{
     background-color: #999;
     border-radius: 1rem;
-    padding: 20px;
+    padding: 1.5px;
 }
 .moreinfo{
     display: grid;
