@@ -7,18 +7,25 @@
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <title>Hoteles</title>
     
-    <title>Hoteles Terra adverture </title>
+    
 </head>
 <body>
     <header class="showcase">
         <div class="content">
-            <div class="title">
-                Portafolio de hoteles
-            </div>
             <img src="../images/logo.png" class="logo" alt="">
-            <div class="text">
-                El mejor sitio para pasar las vacaciones asi que ven a divertirte con nosotros
+            <div class="content2">
+                <div id="myNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay-content">
+                        <a href="../index.html">Inicio</a>
+                        <a href="../portafolioServicios/index.html">Servicios</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
             </div>
         </div>
     </header>
@@ -153,8 +160,15 @@
         <h3>Siguenos</h3>
         <a href="https://www.facebook.com/terraadventure" target="_blank"><i class="fab fa-facebook-square fa-3x" id="facebook"></i></a>
         <a href="https://www.instagram.com/terraadventuree/" target="_blank"><i class="fab fa-instagram fa-3x" id="instagram"></i></a>
-    
-    
     </footer>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
 </body>
 </html>
