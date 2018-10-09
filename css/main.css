@@ -219,17 +219,6 @@ img {vertical-align: middle;}
 }
 
 
-.texth {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
 .numbertexth {
   color: #f2f2f2;
   font-size: 12px;
@@ -282,14 +271,18 @@ footer p {
     margin: 0;
 }
 footer a:first-of-type{
-    color: rgb(16, 16, 240); 
+    color: white; 
+}
+footer a:first-of-type:hover{
+    color: blue; 
 }
 footer a:last-of-type{
-    color: rgba(206, 72, 38, 0.911); 
+    color: white; 
 }
-footer a:hover{
-    color: #fff;
+footer a:last-of-type:hover{
+    color: rgb(241, 53, 20); 
 }
+
 /* Small Screens*/
 @media(max-width: 500px) {
 
