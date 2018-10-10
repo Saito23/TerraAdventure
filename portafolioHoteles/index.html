@@ -29,6 +29,9 @@
             </div>
         </div>
     </header>
+    <!--Top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <!--Hoteles-->
     <section class="about bg-light">
         <div class="container">
             <div class="grid-2">
@@ -170,6 +173,22 @@
         function closeNav() {
             document.getElementById("myNav").style.display = "none";
         }
+        //Top button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
     </script>
 </body>
 </html>

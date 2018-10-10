@@ -15,6 +15,8 @@
             <img src="images/logo.png"  class="logo" alt="">
         </div>
     </header>
+    <!--Top button-->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <!-- Visión, Misión y Valores-->
     <section class="services">
         <div class="container grid-3 center">
@@ -233,6 +235,23 @@
         
     </footer>
     <script>
+        //Top button
+            
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
         //Acordion Codigo conducta
         var acc = document.getElementsByClassName("accordion");
             var e;

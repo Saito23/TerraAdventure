@@ -20,13 +20,14 @@
                 <div class="overlay-content">
                     <a href="../index.html">Inicio</a>
                     <a href="../portafolioHoteles/index.html">Hoteles</a>
-                    <a href="#">Contact</a>
+                    <a href="../contacto/index.html">Contacto</a>
                 </div>
             </div>
             
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
         </div>
     </header>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
     <section class="about">
         <div class="container">
             <div class="grid-2">
@@ -476,6 +477,23 @@
         <a href="https://www.instagram.com/terraadventuree/" target="_blank"><i class="fab fa-instagram fa-3x" id="instagram"></i></a>
     </footer>
     <script>
+        //Top button
+            window.onscroll = function () { scrollFunction() };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                } else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        //menu
         function openNav() {
             document.getElementById("myNav").style.display = "block";
         }
