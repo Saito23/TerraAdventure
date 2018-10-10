@@ -255,7 +255,13 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 /*Cuarto section: - Contacto -*/
-
+a h1{
+    color: #f2f2f2;
+}
+a h1:hover{
+    background-color: #777;
+    width: 380px;
+}
 .about-2 #ws{
     color: springgreen;
 }
