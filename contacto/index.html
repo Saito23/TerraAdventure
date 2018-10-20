@@ -11,16 +11,16 @@
 </head>
 <body>
     <div class="header">
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a href="../index.html">Inicio</a>
-                <a href="../portafolioServicios/index.html">Servicios</a>
-                <a href="../portafolioHoteles/index.html">Hoteles</a>
-            </div>
+        <!--Menu-->
+        <a href="#menu" id="toggle"><span></span></a>
+        
+        <div id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../portafolioHoteles/index.html">Hoteles</a></li>
+                <li><a href="../portafolioServicios/index.html">Contacto</a></li>
+            </ul>
         </div>
-    
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
     </div>
     <form action="enviar.php" method="post">
         <h2>Contacto</h2>
@@ -37,13 +37,46 @@
         <a href="https://www.instagram.com/terraadventuree/" target="_blank"><i class="fab fa-instagram fa-3x" id="instagram"></i></a>
     </footer>
     <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-        }
+        //menu
+            var theToggle = document.getElementById('toggle');
 
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
+
+            function hasClass(elem, className) {
+                return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+            }
+
+            function addClass(elem, className) {
+                if (!hasClass(elem, className)) {
+                    elem.className += ' ' + className;
+                }
+            }
+
+            function removeClass(elem, className) {
+                var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+                if (hasClass(elem, className)) {
+                    while (newClass.indexOf(' ' + className + ' ') >= 0) {
+                        newClass = newClass.replace(' ' + className + ' ', ' ');
+                    }
+                    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+                }
+            }
+
+            function toggleClass(elem, className) {
+                var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
+                if (hasClass(elem, className)) {
+                    while (newClass.indexOf(" " + className + " ") >= 0) {
+                        newClass = newClass.replace(" " + className + " ", " ");
+                    }
+                    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+                } else {
+                    elem.className += ' ' + className;
+                }
+            }
+
+            theToggle.onclick = function () {
+                toggleClass(this, 'on');
+                return false;
+            }
     </script>
 </body>
 </html>

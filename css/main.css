@@ -4,9 +4,7 @@ body{
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 } 
-* {
-  box-sizing: border-box;
-}
+
 .showcase::after {
     content:'';
     height: 100vh;

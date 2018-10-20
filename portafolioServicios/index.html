@@ -14,17 +14,15 @@
         <div class="content">
             <img src="../images/logo.png" class="logo" alt="">
         </div>
-        <div class="content2">
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <a href="../index.html">Inicio</a>
-                    <a href="../portafolioHoteles/index.html">Hoteles</a>
-                    <a href="../contacto/index.html">Contacto</a>
-                </div>
-            </div>
-            
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menú</span>
+        <!--Menu-->
+        <a href="#menu" id="toggle"><span></span></a>
+        
+        <div id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../portafolioHoteles/index.html">Hoteles</a></li>
+                <li><a href="../contacto/index.html">Contacto</a></li>
+            </ul>
         </div>
     </header>
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top <i class="fas fa-angle-up fa-2x"></i></button>
@@ -36,7 +34,7 @@
                 </div>
                 <div>
                     <h3>TREKKING PINCHOTE</h3>
-                    <p>Desafía tus sentidos con este emocionante circuito de 11 actividades que te permitirá disfrutar en un mismo lugar de
+                    <p class="ptex">Desafía tus sentidos con este emocionante circuito de 11 actividades que te permitirá disfrutar en un mismo lugar de
                     una inolvidable experiencia al desafiar la altura y superar retos en compañía de toda la familia y amigos.
                     Vivirás la sensación de deslizarte en el aire en el cable vuelo de 220m, descender con cuerdas 35 mts. De rappel, 45
                     mts. De torrentismo, canyoning, Boulder donde podrás a prueba tu fuerza, una telaraña humana donde te divertirás
@@ -75,7 +73,7 @@
                 </div>
                 <div>
                     <h3>RAFTING SANTANDER</h3>
-                    <p>Desciende los imponentes ríos de Santander con esta actividad que conectará tus sentidos con la naturaleza y pondrá a
+                    <p class="ptex">Desciende los imponentes ríos de Santander con esta actividad que conectará tus sentidos con la naturaleza y pondrá a
                     prueba tu coordinación, tu energía y sobre todo tu sed de aventura. ¡Tu adrenalina, tu plan!
                     Plan Familiar Rio Fonce: Icono de la región que invita a conocer sus aguas en familia o con amigos en un recorrido de
                     10 kilómetros donde encontrarás rápidos clase I, II hasta III que te garantizan 1 hora y media de recorrido lleno de
@@ -107,7 +105,7 @@
                 miedo crónico al agua</div>
         </div>
     </section>
-    <section class="about-3">
+    <section class="about">
         <div class="container">
             <div class="grid-2">
                 <div class="center">
@@ -115,7 +113,7 @@
                 </div>
                 <div>
                     <h3>RAFTING META</h3>
-                    <p>Asómbrate con las cristalinas e inolvidables aguas del Meta
+                    <p class="ptex">Asómbrate con las cristalinas e inolvidables aguas del Meta
                     descendiendo por dos de sus majestuosos ríos. ¡Tu aventura, el
                     mejor rio!
                     Plan Familiar Rio Ariari: Icono de la región que invita a
@@ -185,7 +183,7 @@
                 </div>
                 <div>
                     <h3>ESPELEISMO</h3>
-                    <p>Asómbrate con el lado milenario de Santander a través de la
+                    <p class="ptex">Asómbrate con el lado milenario de Santander a través de la
                     exploración de cuevas que robaran tu aliento, despertaran tus
                     sentidos y te desconectaran de las preocupaciones del día a día
                     para recargando tu energía, a través de temperaturas, sonidos y
@@ -239,7 +237,7 @@
                 </div>
             </div>
     </section>
-    <section class="about-3">
+    <section class="about">
         <div class="container">
             <div class="grid-2">
                 <div class="center">
@@ -247,7 +245,7 @@
                 </div>
                 <div>
                     <h3>Parapente</h3>
-                    <p>¡Deja tierra un par de minutos y deslumbrándote con los cielos
+                    <p class="ptex">¡Deja tierra un par de minutos y deslumbrándote con los cielos
                     santandereanos y sus maravillosos paisajes!
                     Cañón del Chicamocha: Suspira en el imponente cañón del
                     Chicamocha con un vuelo térmico durante 15 a 18 minutos
@@ -318,7 +316,7 @@
                 </div>
                 <div>
                     <h3>BUNGEE JUMPING</h3>
-                    <p>Desafía tus límites y anímate a sentir el vacío al
+                    <p class="ptex">Desafía tus límites y anímate a sentir el vacío al
                     dar un salto hacia el majestuoso Rio Fonce a
                     través de una plataforma de 70 mts levantada
                     con moderna tecnología y equipo de alta gama
@@ -361,7 +359,7 @@
                 </div>
             </div>
     </section>
-    <section class="about-3">
+    <section class="about">
         <div class="container">
             <div class="grid-2">
                 <div class="center">
@@ -369,7 +367,7 @@
                 </div>
                 <div>
                     <h3>PARQUE NACIONAL DEL CHICHAMOCHA</h3>
-                    <p>Hermoso lugar con vista VIP del majestuoso
+                    <p class="ptex">Hermoso lugar con vista VIP del majestuoso
                     Cañón del Chicamocha. Te quedará la
                     sensación de vivir y pertenecer a Santander,
                     invitándote a volver y seguir enamorándote
@@ -494,13 +492,45 @@
                 document.documentElement.scrollTop = 0; 
             }
         //menu
-        function openNav() {
-            document.getElementById("myNav").style.display = "block";
-        }
+        var theToggle = document.getElementById('toggle');
 
-        function closeNav() {
-            document.getElementById("myNav").style.display = "none";
-        }
+            
+            function hasClass(elem, className) {
+                return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+            }
+            
+            function addClass(elem, className) {
+                if (!hasClass(elem, className)) {
+                    elem.className += ' ' + className;
+                }
+            }
+            
+            function removeClass(elem, className) {
+                var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
+                if (hasClass(elem, className)) {
+                    while (newClass.indexOf(' ' + className + ' ') >= 0) {
+                        newClass = newClass.replace(' ' + className + ' ', ' ');
+                    }
+                    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+                }
+            }
+            
+            function toggleClass(elem, className) {
+                var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
+                if (hasClass(elem, className)) {
+                    while (newClass.indexOf(" " + className + " ") >= 0) {
+                        newClass = newClass.replace(" " + className + " ", " ");
+                    }
+                    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+                } else {
+                    elem.className += ' ' + className;
+                }
+            }
+
+            theToggle.onclick = function () {
+                toggleClass(this, 'on');
+                return false;
+            }
     </script>
 </body>
 </html>
