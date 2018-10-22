@@ -62,7 +62,6 @@ body{
     margin: auto;
 }
 /***************Menu***********/
-/* Important styles */
 #toggle {
   display: block;
   width: 28px;
@@ -96,7 +95,7 @@ body{
   border-radius: 2px;
 }
 
-/* on activation */
+
 #toggle.on span {
   background-color: transparent;
 }
@@ -111,7 +110,7 @@ body{
   visibility: visible;
 }
 
-/* menu appearance*/
+
 #menu {
   position: relative;
   color: #999;
@@ -174,6 +173,17 @@ li a:focus {
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+/********Barra***************/
+.barra{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    width: 65px;
+    right: 0;
+    overflow: hidden;
+}
+.barra:hover{
+    width: 150px;
 }
 /************Footer********/
 .bg-dark {
